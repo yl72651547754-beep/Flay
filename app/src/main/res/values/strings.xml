@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">الكأس الطائرة</string>
+    <string name="score_label">النقاط: %1$d</string>
+    <string name="game_over">انتهت اللعبة!</string>
+    <string name="game_over_desc">لقد بذلت مجهوداً رائعاً يا بطل!</string>
+    <string name="play_again">العب مرة أخرى 🔄</string>
+    <string name="tilt_or_drag_hint">المس الشاشة أو اسحب بإصبعك لتوجيه الكأس مباشرة، أو قم بإمالة الهاتف 👆📱</string>
+    <string name="multiplier_active">نقاط مضاعفة! 2X 🌟</string>
+    <string name="color_changing_soon">انتبه! الكأس ستغير لونها 🔔</string>
+    <string name="celebration_title">أحسنت يا بطل! 🎉</string>
+</resources>
