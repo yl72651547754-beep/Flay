@@ -6,9 +6,11 @@ workflows:
     environment:
       java: 17
     scripts:
-      - name: Grant execute permission for gradlew
-        script: chmod +x ./gradlew
+      - name: Install Gradle
+        script: |
+          brew install gradle
       - name: Build Debug APK
-        script: ./gradlew assembleDebug
+        script: |
+          gradle assembleDebug
     artifacts:
       - app/build/outputs/apk/debug/*.apk
