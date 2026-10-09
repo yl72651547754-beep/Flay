@@ -2,15 +2,16 @@ workflows:
   android-debug-workflow:
     name: Android Debug APK
     instance_type: mac_mini_m2
-    max_build_duration: 60
+    max_build_duration: 90
     environment:
       java: 17
     scripts:
       - name: Generate Debug Keystore
         script: |
           keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
-      - name: Build Debug APK
+      - name: Install Gradle and Build APK
         script: |
-          ./gradlew assembleDebug
+          brew install gradle
+          gradle assembleDebug
     artifacts:
       - app/build/outputs/apk/debug/*.apk
